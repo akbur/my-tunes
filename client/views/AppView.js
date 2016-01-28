@@ -13,17 +13,15 @@ var AppView = Backbone.View.extend({
     }, this);
 
     this.model.get('songQueue').on('add', function(song) {
-      //if only song in song queue
-      if(this.model.get('songQueue').length === 1) {
-        //playFirst
-        this.model.get('songQueue').playFirst();
-      }
+      //update queueView
+    }, this);
+
+    this.model.get('songQueue').on('remove', function(song) {
+      //update queueView
     }, this);
   },
 
-    //Listen for shift on songQueue
-      //update queueView
- 
+
  render: function(){
     return this.$el.html([
       this.playerView.$el,
