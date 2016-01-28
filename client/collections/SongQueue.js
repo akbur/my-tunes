@@ -2,6 +2,12 @@
 var SongQueue = Songs.extend({
 
   initialize: function(){
+    
+  }, 
+
+  playFirst: function() {
+    console.log('playFirst called');
+    this.model.at(0).play();
   }
 
 });
