@@ -7,7 +7,7 @@ var SongQueue = Songs.extend({
 
   playFirst: function() {
     console.log('playFirst called');
-    this.model.at(0).play();
+    this.at(0).play();
   }
 
 });
