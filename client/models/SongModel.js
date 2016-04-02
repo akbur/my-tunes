@@ -12,10 +12,10 @@ var SongModel = Backbone.Model.extend({
 
   incrementCount: function() {
     var count = this.get('playCount');
-    this.set('playCount', count+1);
+    this.set('playCount', count + 1);
   },
 
-  play: function(){
+  play: function() {
     // Triggering an event here will also trigger the event on the collection
     this.trigger('play', this);
   },
@@ -31,5 +31,5 @@ var SongModel = Backbone.Model.extend({
   ended: function() {
     this.trigger('ended', this);
   }
-
+  
 });
